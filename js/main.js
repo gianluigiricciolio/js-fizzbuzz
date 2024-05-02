@@ -1,14 +1,23 @@
-'use strict'
+'use strict';
+
+
+const elementContainer = document.querySelector('.list');
 
 for (let i=1; i<=100; i++) {
+    
+    const liElement = document.createElement('li');
+
     if (i%15===0){
-        console.log('FizzBuzz');
+        liElement.append('FizzBuzz');
     }
     else if (i%5===0){
-        console.log('Buzz');
+        liElement.append('Buzz');
     }
     else if (i%3===0){
-        console.log('Fizz');
+        liElement.append('Fizz');
     }
-    else console.log(i);
+    else liElement.append(i);
+
+    elementContainer.append(liElement);
+    console.log(liElement);
 }
